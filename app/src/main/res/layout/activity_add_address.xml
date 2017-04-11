@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".controller.activity.AddAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/add_address_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/add_address_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_address_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_add_address" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/add_address_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_address_info_height"
+        android:layout_below="@+id/add_address_title"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:background="@drawable/rect_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/add_address_iv_location"
+                android:layout_width="@dimen/add_address_iv_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/add_address_iv_padding"
+                android:src="@drawable/address_location" />
+
+            <EditText
+                android:id="@+id/add_address_et_location"
+                style="@style/common_font_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_toEndOf="@+id/add_address_iv_location"
+                android:layout_toRightOf="@+id/add_address_iv_location"
+                android:background="@null"
+                android:hint="@string/add_address_hint_location"
+                android:inputType="text"
+                android:selectAllOnFocus="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_marginLeft="@dimen/add_address_iv_width"
+            android:layout_marginStart="@dimen/add_address_iv_width"
+            android:background="@color/common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/add_address_iv_contact"
+                android:layout_width="@dimen/add_address_iv_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/add_address_iv_padding"
+                android:src="@drawable/address_contact" />
+
+            <EditText
+                android:id="@+id/add_address_et_contact"
+                style="@style/common_font_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_toEndOf="@+id/add_address_iv_contact"
+                android:layout_toRightOf="@+id/add_address_iv_contact"
+                android:background="@null"
+                android:hint="@string/add_address_hint_contact"
+                android:inputType="text"
+                android:selectAllOnFocus="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_marginLeft="@dimen/add_address_iv_width"
+            android:layout_marginStart="@dimen/add_address_iv_width"
+            android:background="@color/common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/add_address_iv_phone"
+                android:layout_width="@dimen/add_address_iv_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/add_address_iv_padding"
+                android:src="@drawable/address_phone" />
+
+            <EditText
+                android:id="@+id/add_address_et_phone"
+                style="@style/common_font_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_toEndOf="@+id/add_address_iv_phone"
+                android:layout_toRightOf="@+id/add_address_iv_phone"
+                android:background="@null"
+                android:hint="@string/add_address_hint_phone"
+                android:inputType="phone"
+                android:selectAllOnFocus="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_address_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_below="@+id/add_address_info"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/login_margin"
+        android:background="@drawable/rect_fill_btn"
+        android:gravity="center">
+
+        <TextView
+            style="@style/common_font_btn_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/add_address_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/add_address_info"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/add_address_info_single_height"
+        android:background="@color/background_white"
+        android:divider="@color/lines_gray"
+        android:dividerHeight="@dimen/common_line"
+        android:visibility="invisible" />
+
+</RelativeLayout>

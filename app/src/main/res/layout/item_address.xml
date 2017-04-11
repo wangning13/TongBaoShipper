@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingLeft="@dimen/common_padding"
+    android:paddingRight="@dimen/common_padding"
+    android:paddingTop="@dimen/common_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_border_btn"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_small"
+        android:paddingRight="@dimen/common_small">
+
+        <TextView
+            android:id="@+id/item_address_tv_location"
+            style="@style/common_font"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_address_tv_height"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/item_address_tv_message"
+            style="@style/common_font_gray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_address_tv_height"
+            android:gravity="center_vertical" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:background="@color/lines_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_address_btn_height"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/item_address_btn_start"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_address_btn_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/address_start" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_address_btn_margin"
+                    android:layout_marginStart="@dimen/item_address_btn_margin"
+                    android:text="@string/item_address_btn_start"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_address_btn_final"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_address_btn_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/address_final" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_address_btn_margin"
+                    android:layout_marginStart="@dimen/item_address_btn_margin"
+                    android:text="@string/item_address_btn_final"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

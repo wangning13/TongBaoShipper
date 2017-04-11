@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <TextView
+            android:id="@+id/add_address_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_my" />
+
+        <LinearLayout
+            android:id="@+id/my_btn_setting"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/title_iv_width"
+                android:layout_height="@dimen/title_iv_height"
+                android:src="@drawable/setting" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/my_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/my_btn_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_background"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/common_large"
+                android:paddingLeft="@dimen/common_larger"
+                android:paddingRight="@dimen/common_larger"
+                android:paddingTop="@dimen/common_large">
+
+                <ImageView
+                    android:id="@+id/my_iv_avatar"
+                    android:layout_width="@dimen/avatar_width"
+                    android:layout_height="@dimen/avatar_height"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    android:id="@+id/my_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/my_iv_avatar"
+                    android:layout_marginLeft="@dimen/my_tv_margin_left"
+                    android:layout_marginStart="@dimen/my_tv_margin_left"
+                    android:layout_marginTop="@dimen/my_tv_name_margin_top"
+                    android:layout_toEndOf="@id/my_iv_avatar"
+                    android:layout_toRightOf="@+id/my_iv_avatar"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/my_tv_name_text_size" />
+
+                <TextView
+                    android:id="@+id/my_tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/my_iv_avatar"
+                    android:layout_marginBottom="@dimen/my_tv_phone_margin_bottom"
+                    android:layout_marginLeft="@dimen/my_tv_margin_left"
+                    android:layout_marginStart="@dimen/my_tv_margin_left"
+                    android:layout_toEndOf="@id/my_iv_avatar"
+                    android:layout_toRightOf="@+id/my_iv_avatar"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/my_tv_phone_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ahead" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_top"
+                android:background="@drawable/shape_border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/my_btn_wallet"
+                    style="@style/common_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_line">
+
+                    <ImageView
+                        android:id="@+id/my_iv_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_wallet" />
+
+                    <TextView
+                        android:id="@+id/my_tv_wallet"
+                        style="@style/fragment_my_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/my_iv_wallet"
+                        android:layout_toRightOf="@+id/my_iv_wallet"
+                        android:text="@string/fragment_my_wallet" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ahead" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginLeft="@dimen/my_line_margin_left"
+                    android:layout_marginStart="@dimen/my_line_margin_left"
+                    android:background="@color/lines_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/my_btn_message"
+                    style="@style/common_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/my_iv_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_message" />
+
+                    <TextView
+                        android:id="@+id/my_tv_message"
+                        style="@style/fragment_my_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/my_iv_message"
+                        android:layout_toRightOf="@+id/my_iv_message"
+                        android:text="@string/fragment_my_message" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ahead" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginLeft="@dimen/my_line_margin_left"
+                    android:layout_marginStart="@dimen/my_line_margin_left"
+                    android:background="@color/lines_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/my_btn_help"
+                    style="@style/common_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_line">
+
+                    <ImageView
+                        android:id="@+id/my_iv_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_help" />
+
+                    <TextView
+                        android:id="@+id/my_tv_help"
+                        style="@style/fragment_my_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/my_iv_help"
+                        android:layout_toRightOf="@+id/my_iv_help"
+                        android:text="@string/fragment_my_help" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ahead" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_top"
+                android:background="@drawable/shape_border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/my_btn_contact"
+                    style="@style/common_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_line">
+
+                    <ImageView
+                        android:id="@+id/my_iv_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_contact" />
+
+                    <TextView
+                        android:id="@+id/my_tv_contact"
+                        style="@style/fragment_my_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/my_iv_contact"
+                        android:layout_toRightOf="@+id/my_iv_contact"
+                        android:text="@string/fragment_my_contact" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ahead" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginLeft="@dimen/my_line_margin_left"
+                    android:layout_marginStart="@dimen/my_line_margin_left"
+                    android:background="@color/lines_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/my_btn_feedback"
+                    style="@style/common_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/my_iv_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_feedback" />
+
+                    <TextView
+                        android:id="@+id/my_tv_feedback"
+                        style="@style/fragment_my_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/my_iv_feedback"
+                        android:layout_toRightOf="@+id/my_iv_feedback"
+                        android:text="@string/fragment_my_feedback" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ahead" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginLeft="@dimen/my_line_margin_left"
+                    android:layout_marginStart="@dimen/my_line_margin_left"
+                    android:background="@color/lines_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/my_btn_about"
+                    style="@style/common_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_line">
+
+                    <ImageView
+                        android:id="@+id/my_iv_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_about" />
+
+                    <TextView
+                        android:id="@+id/my_tv_about"
+                        style="@style/fragment_my_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/my_iv_about"
+                        android:layout_toRightOf="@+id/my_iv_about"
+                        android:text="@string/fragment_my_about" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ahead" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

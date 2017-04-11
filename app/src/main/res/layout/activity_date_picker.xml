@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".View.Activity.DatePickerActivity">
+
+    <RelativeLayout
+        android:id="@+id/date_pick_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/date_pick_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date_pick_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择时间" />
+    </RelativeLayout>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/date_pick_title"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:mcv_arrowColor="@color/font_blue"
+        app:mcv_selectionColor="@color/background_blue"
+        app:mcv_headerTextAppearance="@style/common_font_blue"
+        app:mcv_dateTextAppearance="@style/common_font"
+        app:mcv_weekDayTextAppearance="@style/common_font_blue"
+        app:mcv_tileSize="45dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_line"
+        android:layout_above="@+id/timePicker"
+        android:background="@color/common" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/timePicker"
+        android:background="@drawable/rect_border"
+        android:layout_below="@+id/calendarView"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/date_pick_btn_ok"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/calendarView"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/item_button_background"
+        android:gravity="center"
+
+        >
+
+        <TextView
+            style="@style/common_font_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认" />
+    </LinearLayout>
+
+</RelativeLayout>

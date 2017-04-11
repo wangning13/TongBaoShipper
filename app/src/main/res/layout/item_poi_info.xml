@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tab_setting_background"
+    android:padding="@dimen/common_padding">
+
+    <TextView
+        android:id="@+id/item_poi_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/font_somber"
+        android:textSize="@dimen/common_hint_text_size" />
+
+</RelativeLayout>

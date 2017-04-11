@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/background_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_pop_btn_height"
+        android:gravity="center"
+        android:background="@drawable/tab_setting_background">
+
+        <TextView
+            android:id="@+id/driver_info_tv"
+            style="@style/common_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="司机：陈弱鸡  123-3344-3344" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_line"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@color/lines_gray" />
+
+    <LinearLayout
+        android:id="@+id/avatar_setting_btn_photo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_pop_btn_height"
+        android:background="@drawable/tab_setting_background"
+        android:gravity="center">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/add_driver_btn"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+                <TextView
+                    style="@style/common_font_blue"
+                    android:id="@+id/order_detail_cancel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收藏司机" />
+            </LinearLayout>
+
+            <View
+            android:layout_width="@dimen/common_line"
+            android:layout_height="match_parent"
+            android:background="@color/lines_gray" />
+
+            <LinearLayout
+                android:id="@+id/contact_driver_btn"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+                <TextView
+                    style="@style/common_font_blue"
+                    android:id="@+id/order_detail_ok_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系司机" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_tiny"
+        android:background="@color/background_gray" />
+
+    <LinearLayout
+        android:id="@+id/pop_driver_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_pop_btn_height"
+        android:background="@drawable/tab_setting_background"
+        android:gravity="center">
+
+        <TextView
+            style="@style/common_font_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/cancel" />
+</LinearLayout>
+
+
+</LinearLayout>

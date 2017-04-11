@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1E73B3</color>
+    <color name="colorPrimaryDark">#1C5E95</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="color_control_activated">#1C5E95</color>
+
+    <!--theme color-->
+    <color name="background">#f2f2f2</color>
+    <color name="background_white">#ffffff</color>
+    <color name="background_blue">#1E73B3</color>
+    <color name="background_gray">#cccccc</color>
+    <color name="background_gray_pressed">#efefef</color>
+    <color name="background_black">#211d1d</color>
+    <color name="lines_gray">#c4c4c4</color>
+    <color name="common">#1E73B3</color>
+    <color name="common_pressed">#84aced</color>
+
+    <!--font color-->
+    <color name="font_blue">#1E73B3</color>
+    <color name="font_white">#ffffff</color>
+    <color name="font_black">#000000</color>
+    <color name="font_gray">#999999</color>
+    <color name="font_somber">#333333</color>
+    <color name="font_hint">#797979</color>
+
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="orange">#FF8C00</color>
+</resources>

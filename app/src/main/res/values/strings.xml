@@ -1,0 +1,198 @@
+<resources>
+
+    <string name="network_error">网络故障！</string>
+    <string name="password_length_error">密码长度至少大于等于8！</string>
+    <string name="add">添加</string>
+    <string name="submit">提交</string>
+    <string name="confirm">确定</string>
+    <string name="complete">完成</string>
+    <string name="cancel">取消</string>
+    <string name="money_unit">元</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="operation">操作</string>
+
+    <!--activity frame-->
+    <string name="app_name">通宝</string>
+    <string name="frame_home">首页</string>
+    <string name="frame_nearby">附近</string>
+    <string name="frame_order">订单</string>
+    <string name="frame_my">我</string>
+    <string name="hint_exit">再按一次退出程序</string>
+    <string name="login_invalid">登录信息失效，请重新登陆！</string>
+
+    <!--fragment my-->
+    <string name="title_my">我的</string>
+    <string name="fragment_my_wallet">钱包</string>
+    <string name="fragment_my_message">消息</string>
+    <string name="fragment_my_friend">邀请朋友</string>
+    <string name="fragment_my_help">帮助中心</string>
+    <string name="fragment_my_contact">联系我们</string>
+    <string name="fragment_my_feedback">建议反馈</string>
+    <string name="fragment_my_about">关于</string>
+
+    <!--layout my contact-->
+    <string name="contact_customer_hot_line">拨打客服热线</string>
+    <string name="contact_telephone_number">10086</string>
+
+    <!--activity setting-->
+    <string name="title_setting">设置</string>
+    <string name="setting_change_password">修改密码</string>
+    <string name="setting_logout">退出登录</string>
+    <string name="setting_logout_confirm_msg">确定退出吗？</string>
+
+    <!--activity about-->
+    <string name="title_about">关于</string>
+    <string name="about_app_name">通宝物流信息平台v1.0</string>
+    <string name="about_info">通宝物流信息平台@2016 NanJing University</string>
+
+    <!--activity user-->
+    <string name="title_user">账户信息</string>
+    <string name="user_tv_avatar">头像</string>
+    <string name="user_name">昵称</string>
+    <string name="user_phone">手机</string>
+    <string name="user_dialog_hint">请输入新昵称</string>
+    <string name="user_modify_nick_name">昵称设置</string>
+    <string name="user_modify_nick_name_success">修改昵称成功！</string>
+    <string name="user_insert_sd">请插入SD卡！</string>
+    <string name="user_modify_icon_success">修改头像成功！</string>
+
+    <!--layout user avatar-->
+    <string name="avatar_setting_camera">拍照</string>
+    <string name="avatar_setting_photo">从相册选择照片</string>
+
+    <!--fragment home-->
+    <string name="home_message">消息</string>
+    <string name="home_address">常用地址</string>
+    <string name="home_driver">常用司机</string>
+    <string name="home_wallet">钱包</string>
+    <string name="home_order">订单查询</string>
+    <string name="home_help">帮助中心</string>
+    <string name="home_order_truck">立即叫车</string>
+
+    <!--activity login-->
+    <string name="login_hint_phone">请输入您的手机号码</string>
+    <string name="login_hint_password">请输入您的密码</string>
+    <string name="login_btn">登陆</string>
+    <string name="login_error">登陆碰到问题？</string>
+    <string name="login_user_register">新用户注册</string>
+    <string name="login_message_not_completed">请输入登陆信息！</string>
+
+    <!--activity register-->
+    <string name="title_register">注册</string>
+    <string name="register_hint_phone">请输入您的手机号码</string>
+    <string name="register_hint_password">请设置您的登陆密码</string>
+    <string name="register_btn">注册</string>
+    <string name="register_login">已注册？立即登录</string>
+    <string name="register_has">该手机号已注册！</string>
+    <string name="register_success">手机号注册成功！</string>
+    <string name="register_message_not_completed">请输入注册信息！</string>
+
+    <!--activity change password-->
+    <string name="title_cp">修改密码</string>
+    <string name="cp_hint_old_password">请输入原密码</string>
+    <string name="cp_hint_new_password">请输入新密码</string>
+    <string name="cp_confirm">确认</string>
+    <string name="cp_old_password_error">原密码不正确！</string>
+    <string name="cp_change_password_success">修改密码成功！</string>
+
+    <!--activity wallet-->
+    <string name="title_wallet">钱包</string>
+    <string name="wallet_withdraw">提现</string>
+    <string name="wallet_recharge">充值</string>
+    <string name="wallet_info_money">账户余额</string>
+    <string name="account_detail">收支明细</string>
+    <string name="account_empty">暂时没有账单！</string>
+
+    <!--activity withdraw-->
+    <string name="title_withdraw">提现</string>
+    <string name="withdraw_alipay">提现到支付宝</string>
+    <string name="withdraw_bank">提现到银行卡</string>
+    <string name="withdraw_alipay_account">支付宝账号</string>
+    <string name="withdraw_alipay_account_hint">请输入支付宝账号</string>
+    <string name="withdraw_amount">提现金额</string>
+    <string name="withdraw_amount_hint">可提现金额为</string>
+    <string name="withdraw_bank_card">银行卡号</string>
+    <string name="withdraw_bank_card_hint">请输入银行卡号</string>
+    <string name="withdraw_success">提现成功！</string>
+    <string name="input_alipay_account">请输入支付宝账号！</string>
+    <string name="input_bank_card">请输入银行卡号！</string>
+    <string name="input_amount">请输入提现金额！</string>
+    <string name="input_amount_error">提现失败，账户余额不足！</string>
+
+    <!--activity recharge-->
+    <string name="title_recharge">充值</string>
+    <string name="recharge_bank_card">银行卡号</string>
+    <string name="recharge_bank_card_hint">请输入银行卡号</string>
+    <string name="recharge_amount">充值金额</string>
+    <string name="recharge_amount_hint">请输入充值金额</string>
+    <string name="recharge_success">充值成功！</string>
+
+    <!--activity account-->
+    <string name="title_account">账单</string>
+    <string name="account_income">收入（元）</string>
+    <string name="account_cost">支出（元）</string>
+    <string name="account_money">0.00</string>
+
+    <!--activity address-->
+    <string name="title_address">常用地址</string>
+    <string name="address_empty">您还没有常用地址…</string>
+
+    <!--item address-->
+    <string name="item_address_btn_start">从这出发</string>
+    <string name="item_address_btn_final">到这里去</string>
+    <string name="item_address_delete_success">删除常用地址成功！</string>
+
+    <!--dialog item address-->
+    <string name="dialog_item_address_change">修改常用地址</string>
+    <string name="dialog_item_address_delete">删除常用地址</string>
+
+    <!--activity add address-->
+    <string name="title_add_address">添加常用地址</string>
+    <string name="add_address_hint_location">请输入小区、大厦、街道或商铺的关键词</string>
+    <string name="add_address_hint_contact">请输入联系人姓名（可不填）</string>
+    <string name="add_address_hint_phone">请输入联系人电话</string>
+    <string name="add_address_info_less">请输入常用地址信息！</string>
+    <string name="add_address_success">添加常用地址成功！</string>
+
+    <!--activity change address-->
+    <string name="title_change_address">修改常用地址</string>
+    <string name="change_address_success">修改常用地址成功！</string>
+
+    <!--activity driver-->
+    <string name="title_driver">常用司机</string>
+    <string name="driver_empty">您还没有常用司机…</string>
+
+    <!--item driver-->
+    <string name="item_driver_add_success">添加常用司机成功！</string>
+    <string name="item_driver_delete_success">删除常用司机成功！</string>
+
+    <!--dialog item driver-->
+    <string name="dialog_item_driver_delete">删除常用司机</string>
+
+    <!--add driver activity-->
+    <string name="title_add_driver">添加常用司机</string>
+    <string name="add_driver_hint">请输入司机手机号</string>
+    <string name="add_driver_empty">未找到匹配司机…</string>
+    <!--activity message-->
+    <string name="title_message">消息</string>
+    <string name="message_empty">暂时没有消息！</string>
+    <string name="item_message_iv_content_description">消息图片</string>
+
+    <!--item message-->
+    <string name="item_message_delete_success">删除消息成功</string>
+
+    <!--dialog item message-->
+    <string name="dialog_item_message_delete">删除消息</string>
+
+    <!--activity feedback-->
+    <string name="title_feedback">建议反馈</string>
+    <string name="feedback_tv_hint">请输入您的宝贵的意见或建议。</string>
+    <string name="feedback_input_error">请输入建议反馈信息！</string>
+    <string name="feedback_success">反馈成功！</string>
+
+    <!--fragment order-->
+    <string name="title_order">订单</string>
+    <string name="title_place_order">下单</string>
+
+</resources>

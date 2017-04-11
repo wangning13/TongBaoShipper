@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".controller.activity.UserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/user_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_user" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_btn_avatar"
+        style="@style/common_style_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_top">
+
+        <TextView
+            style="@style/common_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/user_tv_avatar" />
+
+        <ImageView
+            android:id="@+id/user_ahead_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ahead" />
+
+        <ImageView
+            android:id="@+id/user_iv_avatar"
+            android:layout_width="@dimen/avatar_width"
+            android:layout_height="@dimen/avatar_height"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/common_normal"
+            android:layout_marginRight="@dimen/common_normal"
+            android:layout_toLeftOf="@+id/user_ahead_avatar"
+            android:layout_toStartOf="@id/user_ahead_avatar"
+            android:src="@drawable/avatar" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:background="@drawable/shape_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/user_btn_name"
+            style="@style/common_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_line">
+
+            <TextView
+                style="@style/common_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/user_name" />
+
+            <ImageView
+                android:id="@+id/user_ahead_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ahead" />
+
+            <TextView
+                android:id="@+id/user_tv_name"
+                style="@style/common_font_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_large"
+                android:layout_marginRight="@dimen/common_large"
+                android:layout_toLeftOf="@+id/user_ahead_name"
+                android:layout_toStartOf="@id/user_ahead_name"
+                android:text="通宝" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_marginLeft="@dimen/common_large"
+            android:layout_marginStart="@dimen/common_large"
+            android:background="@color/background_gray" />
+
+        <RelativeLayout
+            style="@style/common_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_line">
+
+            <TextView
+                style="@style/common_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/user_phone" />
+
+            <ImageView
+                android:id="@+id/user_ahead_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ahead"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/user_tv_phone"
+                style="@style/common_font_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_large"
+                android:layout_marginRight="@dimen/common_large"
+                android:layout_toLeftOf="@+id/user_ahead_phone"
+                android:layout_toStartOf="@id/user_ahead_phone"
+                android:text="15850775808" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

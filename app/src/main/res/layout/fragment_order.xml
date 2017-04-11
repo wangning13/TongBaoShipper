@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <TextView
+            android:id="@+id/add_address_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_order" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sevenheaven.segmentcontrol.SegmentControl
+            xmlns:segmentcontrol="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/segment_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            segmentcontrol:texts="等待中|进行中|历史订单"
+            segmentcontrol:colors="@color/background_blue"
+            segmentcontrol:cornerRadius="5dip"
+            segmentcontrol:direction="horizon"
+            segmentcontrol:verticalGap="8dip"
+            segmentcontrol:horizonGap="8dip"
+            android:fillViewport="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/segment_control">
+
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+
+</LinearLayout>

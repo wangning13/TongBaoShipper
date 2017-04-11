@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingTop="@dimen/common_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_setting_background"
+        android:padding="@dimen/common_padding">
+
+        <ImageView
+            android:id="@+id/item_driver_iv_avatar"
+            android:layout_width="@dimen/avatar_width"
+            android:layout_height="@dimen/avatar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/avatar" />
+
+        <ImageView
+            android:id="@+id/item_driver_iv_operation"
+            android:layout_width="@dimen/item_driver_iv_size"
+            android:layout_height="@dimen/item_driver_iv_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_driver_iv_avatar"
+            android:layout_alignTop="@id/item_driver_iv_avatar"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_toEndOf="@id/item_driver_iv_avatar"
+            android:layout_toLeftOf="@id/item_driver_iv_operation"
+            android:layout_toRightOf="@+id/item_driver_iv_avatar"
+            android:layout_toStartOf="@id/item_driver_iv_operation"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_driver_tv_name"
+                style="@style/common_font"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/item_driver_tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/common_hint_text_size" />
+
+            <TextView
+                android:id="@+id/item_driver_tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/common_hint_text_size" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

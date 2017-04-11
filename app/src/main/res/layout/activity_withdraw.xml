@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".controller.activity.WithdrawActivity">
+
+    <RelativeLayout
+        android:id="@+id/withdraw_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/withdraw_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/withdraw_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_withdraw" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/withdraw_type"
+        android:layout_width="@dimen/withdraw_type_width"
+        android:layout_height="@dimen/withdraw_type_height"
+        android:layout_below="@+id/withdraw_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/withdraw_btn_alipay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rect_withdraw_left_pressed"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/withdraw_tv_alipay"
+                style="@style/common_font_btn_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdraw_alipay" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/withdraw_btn_bank"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rect_withdraw_right"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/withdraw_tv_bank"
+                style="@style/common_font_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdraw_bank" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/withdraw_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/withdraw_type"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:orientation="vertical" />
+
+</RelativeLayout>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".View.Activity.PlaceOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/place_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/place_order_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/place_order_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_place_order" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place_order_title"
+        android:id="@+id/place_order_sv" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/date_info"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rect_border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="日期信息"
+                        android:textColor="@color/font_black"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/common" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:id="@+id/order_iv_date"
+                        android:layout_width="@dimen/login_iv_width"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/login_iv_padding"
+                        android:src="@drawable/date_pick" />
+
+                    <EditText
+                        android:id="@+id/date_input"
+                        style="@style/common_font_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/order_iv_date"
+                        android:background="@null"
+                        android:hint="请选择需要发货的日期"
+                        android:clickable="true"
+                        android:editable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/address_info"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@+id/date_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rect_border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="地址信息"
+                        android:textColor="@color/font_black"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/common" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:id="@+id/start_point"
+                        android:layout_width="@dimen/login_iv_width"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/login_iv_padding"
+                        android:src="@drawable/address_start" />
+
+                    <EditText
+                        android:id="@+id/start_address_input"
+                        style="@style/common_font_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/start_point"
+                        android:background="@null"
+                        android:hint="请填写发货人地址和号码信息"
+                        android:clickable="true"
+                        android:minLines="2"
+                        android:editable="false" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginLeft="@dimen/login_iv_width"
+                    android:background="@color/common" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:id="@+id/end_point"
+                        android:layout_width="@dimen/login_iv_width"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/login_iv_padding"
+                        android:src="@drawable/address_final" />
+
+                    <EditText
+                        android:id="@+id/arrive_address_input"
+                        style="@style/common_font_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/end_point"
+                        android:background="@null"
+                        android:hint="请填写收货人地址和号码信息"
+                        android:clickable="true"
+                        android:minLines="2"
+                        android:editable="false" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vehicle_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rect_border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="车辆信息"
+                        android:textColor="@color/font_black"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/common" />
+
+                <com.sevenheaven.segmentcontrol.CompleteListView
+                    android:id="@+id/vehicle_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/font_blue">
+                </com.sevenheaven.segmentcontrol.CompleteListView>
+
+                <LinearLayout
+                    android:id="@+id/add_truck_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/item_button_background"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/common_font_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加车辆" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/old_driver_and_money"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/vehicle_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rect_border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/old_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="优先发送给常用司机"
+                        android:textColor="@color/font_black" />
+                    <CheckBox
+                        android:id="@+id/old_driver_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:checked="true" />
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line"
+                    android:background="@color/common" />
+
+
+                <RelativeLayout
+                    android:id="@+id/transport_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/transport_distance_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="行车路程共 0 公里"
+                        android:textColor="@color/font_black"
+                        />
+                    <TextView
+                        android:id="@+id/transport_money_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="运费共 0 元"
+                        android:textColor="@color/font_black"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/place_order_truck_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/old_driver_and_money"
+                android:layout_marginRight="@dimen/common_small"
+                android:layout_marginLeft="@dimen/common_small"
+                android:layout_marginTop="@dimen/common_small"
+                android:layout_marginBottom="@dimen/common_small"
+                android:background="@drawable/rect_border"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/item_button_background"
+                    android:gravity="center"
+                    android:padding="@dimen/common_small"
+                    android:drawableLeft="@drawable/home_order_truck"
+                    android:text="@string/home_order_truck"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/fragment_home_order_truck_text_size"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

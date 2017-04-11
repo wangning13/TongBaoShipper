@@ -1,0 +1,121 @@
+    <resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/color_control_activated</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+    <style name="Theme.picker" parent="AppTheme">
+        <item name="android:editTextStyle">@style/Widget.EditText.Blue</item>
+    </style>
+
+    <style name="Widget.EditText.Blue" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/font_blue</item>
+    </style>
+    <!--title theme-->
+    <style name="title_font">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/font_white</item>
+    </style>
+
+    <!--frame bottom iv-->
+    <style name="frame_bottom_iv">
+        <item name="android:paddingTop">@dimen/frame_iv_padding_top</item>
+        <item name="android:paddingBottom">@dimen/frame_iv_padding_bottom</item>
+    </style>
+
+    <!--fragment my-->
+    <style name="fragment_my_setting_tv" parent="common_font">
+        <item name="android:textSize">@dimen/common_text_size</item>
+        <item name="android:textColor">@color/font_somber</item>
+        <item name="android:layout_marginLeft">@dimen/common_large</item>
+    </style>
+
+    <!--fragment home-->
+    <style name="fragment_home_btn">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/common_large</item>
+        <item name="android:paddingBottom">@dimen/common_large</item>
+        <item name="android:paddingRight">@dimen/common_padding</item>
+        <item name="android:paddingLeft">@dimen/common_padding</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:drawablePadding">@dimen/common_tiny</item>
+        <item name="android:textSize">@dimen/fragment_home_btn_text_size</item>
+        <item name="android:textColor">@color/font_blue</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/tab_setting_background</item>
+    </style>
+
+    <!--common-->
+    <style name="common_style">
+        <item name="android:background">@drawable/tab_setting_background</item>
+        <item name="android:paddingTop">@dimen/common_smaller</item>
+        <item name="android:paddingBottom">@dimen/common_smaller</item>
+        <item name="android:paddingLeft">@dimen/common_larger</item>
+        <item name="android:paddingRight">@dimen/common_larger</item>
+    </style>
+
+    <style name="common_style_tab">
+        <item name="android:background">@drawable/tab_background</item>
+        <item name="android:paddingRight">@dimen/common_large</item>
+        <item name="android:paddingLeft">@dimen/common_larger</item>
+        <item name="android:paddingTop">@dimen/common_normal</item>
+        <item name="android:paddingBottom">@dimen/common_normal</item>
+    </style>
+
+    <style name="common_font">
+        <item name="android:textSize">@dimen/common_text_size</item>
+        <item name="android:textColor">@color/font_somber</item>
+    </style>
+
+    <style name="common_font_gray" parent="common_font">
+        <item name="android:textColor">@color/font_gray</item>
+    </style>
+
+    <style name="common_font_blue" parent="common_font">
+        <item name="android:textColor">@color/font_blue</item>
+    </style>
+
+    <style name="common_font_white" parent="common_font">
+        <item name="android:textColor">@color/font_white</item>
+    </style>
+
+    <style name="common_font_hint" parent="common_font">
+        <item name="android:textSize">@dimen/common_hint_text_size</item>
+        <item name="android:textColorHint">@color/font_hint</item>
+    </style>
+
+    <style name="common_font_btn">
+        <item name="android:textSize">@dimen/btn_text_size</item>
+        <item name="android:textColor">@color/common</item>
+    </style>
+
+    <style name="common_font_btn_fill" parent="common_font_btn">
+        <item name="android:textColor">@color/font_white</item>
+    </style>
+
+    <style name="dot_style">
+        <item name="android:layout_width">5dip</item>
+        <item name="android:layout_height">5dip</item>
+        <item name="android:layout_marginLeft">1.5dip</item>
+        <item name="android:layout_marginRight">1.5dip</item>
+    </style>
+
+    <style name="pop_window_anim">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pop_hidden</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:background="@drawable/item_truck_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_small"
+        android:paddingRight="@dimen/common_small">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_tv_address_name"
+                android:layout_marginLeft="@dimen/item_address_btn_margin"
+                android:layout_marginStart="@dimen/item_address_btn_margin"
+                android:text="南京师范大学（随园校区）"
+                android:textColor="@color/font_somber"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_tv_address_detail"
+                android:layout_marginLeft="@dimen/item_address_btn_margin"
+                android:layout_marginStart="@dimen/item_address_btn_margin"
+                android:text="宁海路122号南京师范大学随园校区（近五台山体育馆北门）"
+                android:textColor="@color/font_somber"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <View
+            android:layout_marginLeft="@dimen/item_address_btn_margin"
+            android:layout_marginStart="@dimen/item_address_btn_margin"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:background="@color/background_gray" />
+    </LinearLayout>
+</FrameLayout>

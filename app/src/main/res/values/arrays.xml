@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--account type-->
+    <string-array name="account_type">
+        <item>充值</item>
+        <item>提现</item>
+        <item>支付</item>
+        <item>退款</item>
+        <item>到账</item>
+    </string-array>
+
+    <!--message type-->
+    <string-array name="message_type">
+        <item>订单被抢到</item>
+        <item>订单完成</item>
+        <item>正在进行的订单被取消</item>
+        <item>其他消息</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/background_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_pop_btn_height"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/contact_customer_hot_line"
+            style="@style/common_font_gray" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_line"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@color/lines_gray" />
+
+    <LinearLayout
+        android:id="@+id/contact_btn_dial"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_pop_btn_height"
+        android:background="@drawable/tab_setting_background"
+        android:gravity="center">
+
+        <TextView
+            style="@style/common_font_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/contact_telephone_number" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_tiny"
+        android:background="@color/background_gray" />
+
+    <LinearLayout
+        android:id="@+id/contact_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_pop_btn_height"
+        android:background="@drawable/tab_setting_background"
+        android:gravity="center">
+
+        <TextView
+            style="@style/common_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+
+</LinearLayout>

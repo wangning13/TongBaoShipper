@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".controller.activity.RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/register_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <TextView
+            android:id="@+id/register_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_register" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/register_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_info_height"
+        android:layout_below="@+id/register_title"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/login_margin_large"
+        android:background="@drawable/rect_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/register_iv_phone"
+                android:layout_width="@dimen/login_iv_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/login_iv_padding"
+                android:src="@drawable/login_phone" />
+
+            <EditText
+                android:id="@+id/register_et_phone"
+                style="@style/common_font_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/register_iv_phone"
+                android:background="@null"
+                android:hint="@string/register_hint_phone"
+                android:inputType="phone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_marginLeft="@dimen/login_iv_width"
+            android:background="@color/common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/register_iv_password"
+                android:layout_width="@dimen/login_iv_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/login_iv_padding"
+                android:src="@drawable/login_password" />
+
+            <EditText
+                android:id="@+id/register_et_password"
+                style="@style/common_font_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/register_iv_password"
+                android:background="@null"
+                android:hint="@string/register_hint_password"
+                android:inputType="textPassword" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_below="@+id/register_info"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/login_margin"
+        android:background="@drawable/rect_fill_btn"
+        android:gravity="center">
+
+        <TextView
+            style="@style/common_font_btn_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_btn" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register_tv_login"
+        style="@style/common_font_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/register_btn"
+        android:layout_below="@+id/register_btn"
+        android:layout_marginTop="@dimen/login_margin"
+        android:text="@string/register_login" />
+
+</RelativeLayout>

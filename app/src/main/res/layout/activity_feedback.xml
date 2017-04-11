@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".controller.activity.FeedbackActivity">
+
+    <RelativeLayout
+        android:id="@+id/feedback_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/feedback_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_feedback" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/feedback_tv"
+        style="@style/common_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/feedback_tv_height"
+        android:layout_below="@id/feedback_title"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:background="@drawable/rect_border"
+        android:gravity="start"
+        android:hint="@string/feedback_tv_hint"
+        android:padding="@dimen/common_smaller"
+        android:textColorHint="@color/font_hint" />
+
+    <LinearLayout
+        android:id="@+id/feedback_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_below="@+id/feedback_tv"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/login_margin"
+        android:background="@drawable/rect_fill_btn"
+        android:gravity="center">
+
+        <TextView
+            style="@style/common_font_btn_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit" />
+    </LinearLayout>
+
+
+</RelativeLayout>

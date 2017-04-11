@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".controller.activity.WalletActivity">
+
+    <RelativeLayout
+        android:id="@+id/wallet_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue">
+
+        <LinearLayout
+            android:id="@+id/wallet_btn_back"
+            android:layout_width="@dimen/title_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wallet_tv_title"
+            style="@style/title_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_wallet" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/wallet_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallet_info_height"
+        android:layout_below="@+id/wallet_title"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:background="@drawable/rect_border"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <RelativeLayout
+            android:id="@+id/wallet_btn_bill"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_setting_background">
+
+            <ImageView
+                android:id="@+id/wallet_iv_icon"
+                android:layout_width="@dimen/login_iv_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/wallet_iv_padding"
+                android:src="@drawable/home_wallet" />
+
+            <TextView
+                android:id="@+id/wallet_tv"
+                style="@style/common_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/wallet_iv_icon"
+                android:text="@string/wallet_info_money" />
+
+            <TextView
+                android:id="@+id/wallet_tv_money"
+                style="@style/common_font_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/wallet_iv_margin_left"
+                android:layout_toRightOf="@+id/wallet_tv"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/wallet_iv_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/wallet_iv_padding"
+                android:src="@drawable/ahead" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:background="@color/lines_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/wallet_btn_withdraw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/wallet_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/rect_wallet_withdraw">
+
+                <TextView
+                    style="@style/common_font_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/wallet_withdraw" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wallet_btn_recharge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/wallet_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/rect_wallet_recharge">
+
+                <TextView
+                    style="@style/common_font_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/wallet_recharge" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/account_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wallet_info"
+        android:layout_marginTop="@dimen/common_margin">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_toLeftOf="@+id/account_detail_tv"
+            android:layout_toStartOf="@+id/account_detail_tv"
+            android:background="@color/lines_gray" />
+
+        <TextView
+            android:id="@+id/account_detail_tv"
+            style="@style/common_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/account_detail" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_toEndOf="@+id/account_detail_tv"
+            android:layout_toRightOf="@+id/account_detail_tv"
+            android:background="@color/lines_gray" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@id/account_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_detail"
+        android:layout_marginTop="@dimen/common_margin"
+        android:divider="@color/lines_gray"
+        android:dividerHeight="@dimen/common_line"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
+    <LinearLayout
+        android:id="@+id/account_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/account_detail"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="@dimen/empty_message_iv"
+            android:layout_height="@dimen/empty_message_iv"
+            android:scaleType="centerInside"
+            android:src="@drawable/listview_empty" />
+
+        <TextView
+            style="@style/common_font_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:text="@string/account_empty" />
+    </LinearLayout>
+
+
+</RelativeLayout>

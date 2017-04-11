@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingLeft="@dimen/common_padding"
+    android:paddingRight="@dimen/common_padding"
+    android:paddingTop="@dimen/common_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_button_background"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_small"
+        android:paddingRight="@dimen/common_small">
+
+        <LinearLayout
+            android:id="@+id/item_truck_type"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/item_truck_type_value"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/truck_small" />
+
+                <TextView
+                    android:id="@+id/tv_truck_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="大货车"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_truck_price_value"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_truck_startingprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_address_btn_margin"
+                    android:layout_marginStart="@dimen/item_address_btn_margin"
+                    android:text="85元/5公里"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+                <TextView
+                    android:id="@+id/tv_truck_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_address_btn_margin"
+                    android:layout_marginStart="@dimen/item_address_btn_margin"
+                    android:text="3.5元/公里"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_truck_lwh"
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/item_truck_lwh_key"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/truck_lwh" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="长宽高"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_truck_lwh_value"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_truck_lwh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_address_btn_margin"
+                    android:layout_marginStart="@dimen/item_address_btn_margin"
+                    android:text="3.5m*2.5m*2.5m"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/item_truck_weight"
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/item_truck_weight_key"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/truck_weight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="载重"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_truck_weight_value"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_truck_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_address_btn_margin"
+                    android:layout_marginStart="@dimen/item_address_btn_margin"
+                    android:text="5吨"
+                    android:textColor="@color/font_somber"
+                    android:textSize="@dimen/item_address_btn_tv_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

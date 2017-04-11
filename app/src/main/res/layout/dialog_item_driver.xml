@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_border"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/common_font_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_item_title_height"
+        android:background="@color/background_blue"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_normal"
+        android:text="@string/operation" />
+
+    <Button
+        android:id="@+id/dialog_item_driver_btn_delete"
+        style="@style/common_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_setting_background"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_larger"
+        android:text="@string/dialog_item_driver_delete" />
+
+</LinearLayout>

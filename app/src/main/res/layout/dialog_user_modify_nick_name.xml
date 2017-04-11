@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/background_white">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/title_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_blue"
+        android:gravity="center"
+        android:text="@string/user_modify_nick_name" />
+
+    <EditText
+        android:id="@+id/dialog_et"
+        style="@style/common_font_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_et_height"
+        android:layout_below="@id/dialog_title"
+        android:background="@null"
+        android:hint="@string/user_dialog_hint"
+        android:inputType="text"
+        android:padding="@dimen/common_smaller" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_line"
+        android:layout_alignBottom="@+id/dialog_et"
+        android:background="@color/background_gray" />
+
+    <LinearLayout
+        android:id="@+id/dialog_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_btn_height"
+        android:layout_below="@id/dialog_et"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_btn_confirm"
+            style="@style/common_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_setting_background"
+            android:text="@string/confirm" />
+
+        <View
+            android:layout_width="@dimen/common_line"
+            android:layout_height="match_parent"
+            android:background="@color/background_gray" />
+
+        <Button
+            android:id="@+id/dialog_btn_cancel"
+            style="@style/common_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_setting_background"
+            android:text="@string/cancel" />
+    </LinearLayout>
+</RelativeLayout>

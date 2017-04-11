@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/gradle.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/vcs.xml
+/.idea/dictionaries/MoranHe.xml
+/build
+/captures
+/.idea/libraries
+/.idea/misc.xml

@@ -1,0 +1,131 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="frame_bottom_height">54dp</dimen>
+    <dimen name="frame_font_bottom">12sp</dimen>
+
+    <!--title style-->
+    <dimen name="title_height">45dp</dimen>
+    <dimen name="title_btn_width">40dp</dimen>
+    <dimen name="title_padding_top">11.5dp</dimen>
+    <dimen name="title_padding_bottom">10dp</dimen>
+    <dimen name="title_padding_right">12dp</dimen>
+    <dimen name="title_padding_left">12dp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="title_iv_width">15dp</dimen>
+    <dimen name="title_iv_height">15dp</dimen>
+
+    <!--btn style-->
+    <dimen name="btn_height">36dp</dimen>
+    <dimen name="btn_text_size">16sp</dimen>
+
+    <!--frame iv-->
+    <dimen name="frame_iv_padding_top">3dp</dimen>
+    <dimen name="frame_iv_padding_bottom">2dp</dimen>
+
+    <!--common-->
+    <dimen name="common_mini">3dp</dimen>
+    <dimen name="common_tiny">6dp</dimen>
+    <dimen name="common_smaller">9dp</dimen>
+    <dimen name="common_small">12dp</dimen>
+    <dimen name="common_normal">15dp</dimen>
+    <dimen name="common_large">18dp</dimen>
+    <dimen name="common_larger">21dp</dimen>
+    <dimen name="common_line">0.5dp</dimen>
+    <dimen name="common_hint_text_size">12sp</dimen>
+    <dimen name="common_text_size">15sp</dimen>
+    <dimen name="common_shape_border">1dp</dimen>
+    <dimen name="common_shape_radius">5dp</dimen>
+    <dimen name="common_margin">12dp</dimen>
+    <dimen name="common_margin_top">20dp</dimen>
+    <dimen name="common_padding">12dp</dimen>
+
+    <!--fragment my-->
+    <dimen name="my_tv_name_margin_top">15dp</dimen>
+    <dimen name="my_tv_margin_left">21dp</dimen>
+    <dimen name="my_tv_phone_margin_bottom">12dp</dimen>
+    <dimen name="my_tv_name_text_size">18sp</dimen>
+    <dimen name="my_tv_phone_text_size">15sp</dimen>
+    <dimen name="avatar_width">72dp</dimen>
+    <dimen name="avatar_height">72dp</dimen>
+    <dimen name="my_iv_avatar_margin_left">10dp</dimen>
+    <dimen name="my_iv_setting_width">35dp</dimen>
+    <dimen name="my_iv_setting_height">35dp</dimen>
+    <dimen name="my_line_margin_left">72dp</dimen>
+
+    <!--fragment home-->
+    <dimen name="fragment_home_banner_height">102dp</dimen>
+    <dimen name="fragment_home_btn_text_size">13sp</dimen>
+    <dimen name="fragment_home_order_truck_text_size">18sp</dimen>
+
+    <!--activity login/register/change password-->
+    <dimen name="login_margin">20dp</dimen>
+    <dimen name="login_margin_large">30dp</dimen>
+    <dimen name="login_btn_register_margin">60dp</dimen>
+    <dimen name="login_info_height">120dp</dimen>
+    <dimen name="login_iv_padding">15dp</dimen>
+    <dimen name="login_iv_width">60dp</dimen>
+
+    <!--activity wallet-->
+    <dimen name="wallet_info_height">136dp</dimen>
+    <dimen name="wallet_info_padding">3dp</dimen>
+    <dimen name="wallet_iv_padding">12dp</dimen>
+    <dimen name="wallet_iv_margin_left">40dp</dimen>
+    <dimen name="wallet_btn_margin">12dp</dimen>
+    <dimen name="empty_message_iv">108dp</dimen>
+
+    <!--activity withdraw-->
+    <dimen name="withdraw_type_height">42dp</dimen>
+    <dimen name="withdraw_type_width">272dp</dimen>
+
+    <!--fragment withdraw-->
+    <dimen name="fragment_withdraw_info_height">120dp</dimen>
+    <dimen name="fragment_withdraw_info_tv_width">98dp</dimen>
+
+    <!--activity recharge-->
+    <dimen name="recharge_info_height">120dp</dimen>
+    <dimen name="recharge_info_tv_width">98dp</dimen>
+
+    <!--activity account-->
+    <dimen name="account_info_height">72dp</dimen>
+    <dimen name="account_info_padding">20dp</dimen>
+    <dimen name="account_info_header_text_size">10sp</dimen>
+
+    <!--activity add address-->
+    <dimen name="add_address_info_height">150dp</dimen>
+    <dimen name="add_address_info_single_height">50dp</dimen>
+    <dimen name="add_address_iv_width">50dp</dimen>
+    <dimen name="add_address_iv_padding">12dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--item address-->
+    <dimen name="item_address_tv_height">30dp</dimen>
+    <dimen name="item_address_btn_height">40dp</dimen>
+    <dimen name="item_address_btn_tv_size">12sp</dimen>
+    <dimen name="item_address_btn_margin">8dp</dimen>
+
+    <!--dialog item-->
+    <dimen name="dialog_item_title_height">42dp</dimen>
+
+    <!--item account-->
+    <dimen name="item_account_time_text_size">10sp</dimen>
+    <dimen name="item_account_money_text_size">16sp</dimen>
+
+    <!--item message-->
+    <dimen name="item_message_iv">30dp</dimen>
+    <dimen name="message_dot_size">10dp</dimen>
+
+    <!--layout pop-->
+    <dimen name="layout_pop_btn_height">42dp</dimen>
+
+    <!--activity feedback-->
+    <dimen name="feedback_tv_height">135dp</dimen>
+
+    <!--item driver-->
+    <dimen name="item_driver_iv_size">48dp</dimen>
+
+    <!--dialog-->
+    <dimen name="dialog_et_height">50dp</dimen>
+    <dimen name="dialog_btn_height">42dp</dimen>
+</resources>
