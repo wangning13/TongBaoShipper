@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import cn.edu.nju.software.tongbaoshipper.common.Truck;
+import cn.edu.nju.software.tongbaoshipper.model.Truck;
 import cn.edu.nju.software.tongbaoshipper.R;
 import cn.edu.nju.software.tongbaoshipper.service.ShipperService;
 import cn.edu.nju.software.tongbaoshipper.controller.adapter.AllTruckAdapter;

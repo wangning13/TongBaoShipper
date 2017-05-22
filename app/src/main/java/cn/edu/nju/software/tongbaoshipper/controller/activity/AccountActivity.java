@@ -39,10 +39,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.Account;
-import cn.edu.nju.software.tongbaoshipper.common.MonthlyAccount;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.Account;
+import cn.edu.nju.software.tongbaoshipper.model.MonthlyAccount;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.service.UserService;
 import cn.edu.nju.software.tongbaoshipper.controller.adapter.AccountAdapter;
@@ -248,12 +248,6 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         Log.e(AccountActivity.class.getName(), volleyError.getMessage(), volleyError);
-                        // http authentication 401
-//                        if (volleyError.networkResponse.statusCode == Net.NET_ERROR_AUTHENTICATION) {
-//                            Intent intent = new Intent(AccountActivity.this, LoginActivity.class);
-//                            startActivity(intent);
-//                            return;
-//                        }
                         Toast.makeText(AccountActivity.this, AccountActivity.this.getResources().getString(R.string.network_error),
                                 Toast.LENGTH_SHORT).show();
                     }

@@ -25,9 +25,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.edu.nju.software.tongbaoshipper.controller.adapter.AccountAdapter;
-import cn.edu.nju.software.tongbaoshipper.common.Account;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.Account;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.R;
 import cn.edu.nju.software.tongbaoshipper.service.UserService;

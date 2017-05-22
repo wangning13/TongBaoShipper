@@ -22,13 +22,12 @@ import java.util.Locale;
 import java.util.Set;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.Account;
-import cn.edu.nju.software.tongbaoshipper.common.Banner;
-import cn.edu.nju.software.tongbaoshipper.common.Driver;
-import cn.edu.nju.software.tongbaoshipper.common.Message;
-import cn.edu.nju.software.tongbaoshipper.common.MonthlyAccount;
-import cn.edu.nju.software.tongbaoshipper.common.Order;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.Account;
+import cn.edu.nju.software.tongbaoshipper.model.Banner;
+import cn.edu.nju.software.tongbaoshipper.model.Driver;
+import cn.edu.nju.software.tongbaoshipper.model.Message;
+import cn.edu.nju.software.tongbaoshipper.model.MonthlyAccount;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.constant.Prefs;
 import cn.jpush.android.api.JPushInterface;
@@ -89,6 +88,7 @@ public class UserService {
      */
     public static boolean login(final Context context, JSONObject jsonObject, String phoneNum, String password, int type) throws JSONException {
         if (getResult(jsonObject)) {
+            SharedPreferences sharedPreferences = context.getSharedPreferences(Prefs.USER_INFO, Context.MODE_PRIVATE);
             JSONObject data = jsonObject.getJSONObject("data");
             User user = new User();
             user.setId(data.getInt("id"));
@@ -100,6 +100,10 @@ public class UserService {
             user.setPhoneNum(phoneNum);
             user.setPassword(password);
             user.setType(type);
+            sharedPreferences.edit().putBoolean(Prefs.IS_LOGIN,true).apply();
+            sharedPreferences.edit().putString(Prefs.PHONE_NUMBER,phoneNum).apply();
+            sharedPreferences.edit().putString(Prefs.PWD,password).apply();
+
             try {
                 user.setRegisterTime(sdf.parse(data.getString("registerTime")));
             } catch (ParseException e) {
@@ -540,6 +544,9 @@ public class UserService {
         SharedPreferences.Editor editor = context.getSharedPreferences(Prefs.PREF_NAME, Context.MODE_PRIVATE).edit();
         editor.putString(Prefs.PREF_KEY_USER, "");
         editor.apply();
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Prefs.USER_INFO,Context.MODE_PRIVATE);
+        sharedPreferences.edit().putBoolean(Prefs.IS_LOGIN,false).apply();
+
         // show login message invalid
         if (isShow) {
             Toast.makeText(context, context.getResources().getString(R.string.login_invalid),

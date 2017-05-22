@@ -20,8 +20,8 @@ import com.sevenheaven.segmentcontrol.SegmentControl.OnSegmentControlClickListen
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.edu.nju.software.tongbaoshipper.common.Order;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.Order;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.R;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.LoginActivity;
 

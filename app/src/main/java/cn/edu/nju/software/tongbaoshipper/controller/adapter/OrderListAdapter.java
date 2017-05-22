@@ -15,7 +15,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 
-import cn.edu.nju.software.tongbaoshipper.common.Order;
+import cn.edu.nju.software.tongbaoshipper.model.Order;
 import cn.edu.nju.software.tongbaoshipper.R;
 import cn.edu.nju.software.tongbaoshipper.service.ShipperService;
 

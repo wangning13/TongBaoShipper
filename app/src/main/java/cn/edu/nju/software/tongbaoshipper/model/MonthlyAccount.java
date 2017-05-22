@@ -1,4 +1,4 @@
-package cn.edu.nju.software.tongbaoshipper.common;
+package cn.edu.nju.software.tongbaoshipper.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

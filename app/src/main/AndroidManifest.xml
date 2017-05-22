@@ -12,14 +12,12 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- 这个权限用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -39,13 +37,12 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
     <application
-        android:name="cn.edu.nju.software.tongbaoshipper.controller.activity.LocationApplication"
+        android:name=".controller.activity.LocationApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="7qVewe0QGZuk6q2dzWr7YoR1XbLctIgm" />
@@ -58,7 +55,7 @@
             android:name="JPUSH_APPKEY"
             android:value="ca9fe909612197690db46060" />
 
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -75,21 +72,19 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" >
+            android:process=":remote">
             <intent-filter>
-                <action android:name="com.baidu.location.service_v2.2" >
-                </action>
+                <action android:name="com.baidu.location.service_v2.2"></action>
             </intent-filter>
         </service>
 
-        <!-- Required  SDK核心功能-->
+        <!-- Required  SDK核心功能 -->
         <service
             android:name="cn.jpush.android.service.DownloadService"
             android:enabled="true"
             android:exported="false" />
 
-
-        <!-- Required SDK 核心功能-->
+        <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <service
             android:name="cn.jpush.android.service.PushService"
@@ -111,19 +106,19 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
+
                 <category android:name="${applicationId}" />
             </intent-filter>
-
         </service>
 
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
-                <!--Required  显示通知栏 -->
+                <!-- Required  显示通知栏 -->
                 <category android:name="${applicationId}" />
             </intent-filter>
             <intent-filter>
@@ -137,37 +132,35 @@
 
                 <data android:scheme="package" />
             </intent-filter>
-
         </receiver>
 
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.AlarmReceiver"
             android:exported="false" />
 
-        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
         <receiver
             android:name=".service.ReceiverService"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.REGISTRATION" />
-                <!--Required  用户注册SDK的intent-->
+                <!-- Required  用户注册SDK的intent -->
                 <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
                 <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
-                <!--Required  用户接收SDK消息的intent-->
+                <!-- Required  用户接收SDK消息的intent -->
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
-                <!--Required  用户接收SDK通知栏信息的intent-->
+                <!-- Required  用户接收SDK通知栏信息的intent -->
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
-                <!--Required  用户打开自定义通知栏的intent-->
+                <!-- Required  用户打开自定义通知栏的intent -->
                 <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
-                <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
                 <action android:name="cn.jpush.android.intent.CONNECTION" />
                 <!-- 接收网络变化 连接/断开 since 1.6.3 -->
                 <category android:name="${applicationId}" />
             </intent-filter>
         </receiver>
-
 
         <activity
             android:name=".controller.activity.SplashActivity"
@@ -229,11 +222,10 @@
         <activity
             android:name=".controller.activity.AddressActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".controller.activity.PlaceOrderActivity"
-            android:theme="@style/Theme.picker"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.picker" />
         <activity
             android:name=".controller.activity.ChangeAddressActivity"
             android:screenOrientation="portrait" />
@@ -243,11 +235,10 @@
         <activity
             android:name=".controller.activity.AddDriverActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".controller.activity.DatePickerActivity"
-            android:theme="@style/Theme.picker"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.picker" />
         <activity
             android:name=".controller.activity.AllTruckActivity"
             android:screenOrientation="portrait" />
@@ -259,16 +250,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".controller.activity.RunningOrderActivity"
-            android:theme="@style/Theme.picker"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.picker" />
         <activity
             android:name=".controller.activity.WaitingOrderActivity"
-            android:theme="@style/Theme.picker"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.picker" />
         <activity
             android:name=".controller.activity.HistoryOrderActivity"
-            android:theme="@style/Theme.picker"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.picker" />
+        <activity android:name=".controller.activity.MainActivity"></activity>
     </application>
 
 </manifest>

@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -40,13 +39,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.Truck;
-import cn.edu.nju.software.tongbaoshipper.common.User;
-import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.service.ShipperService;
+import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.controller.adapter.OrderedTruckAdapter;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.Truck;
+import cn.edu.nju.software.tongbaoshipper.model.User;
+import cn.edu.nju.software.tongbaoshipper.service.ShipperService;
 
 /**
  * Created by zhang on 2016/4/16.
@@ -144,9 +143,6 @@ public class PlaceOrderActivity extends AppCompatActivity implements View.OnClic
 
             @Override
             public void onGetDrivingRouteResult(DrivingRouteResult drivingRouteResult) {
-
-
-                System.out.println(drivingRouteResult.getRouteLines().get(0).getDistance()+"M");
                 distance=(drivingRouteResult.getRouteLines().get(0).getDistance()-1)/1000+1;
                 price=0;
                 for (Truck t:arrTruck)
@@ -189,10 +185,10 @@ public class PlaceOrderActivity extends AppCompatActivity implements View.OnClic
         btn_back.setOnClickListener(this);
         btn_add_truck.setOnClickListener(this);
         btn_place_order.setOnClickListener(this);
-        date_input.setOnTouchListener(new EditTextClickListener());
+        date_input.setOnClickListener(new EditTextClickListener());
 
-        start_point_input.setOnTouchListener(new EditTextClickListener());
-        arrive_point_input.setOnTouchListener(new EditTextClickListener());
+        start_point_input.setOnClickListener(new EditTextClickListener());
+        arrive_point_input.setOnClickListener(new EditTextClickListener());
         start_point_input.addTextChangedListener(new AddressChangeListener());
         arrive_point_input.addTextChangedListener(new AddressChangeListener());
 
@@ -226,14 +222,14 @@ public class PlaceOrderActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    private class EditTextClickListener implements View.OnTouchListener
+    private class EditTextClickListener implements View.OnClickListener
     {
-        int touch_flag=0;
+//        int touch_flag=0;
         @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            touch_flag++;
-            if(touch_flag>=2){
-                //自己业务
+        public void onClick(View v) {
+//            touch_flag++;
+//            if(touch_flag==2){
+//                //自己业务
                 switch(v.getId()) {
                     case R.id.date_input:
                         Log.d(PlaceOrderActivity.class.getName(), "get date");
@@ -254,10 +250,9 @@ public class PlaceOrderActivity extends AppCompatActivity implements View.OnClic
                     default:
                         Log.e(PlaceOrderActivity.class.getName(), "Unknown id");
                 }
-                touch_flag=0;
 
-            }
-            return false;
+//            }
+//            return false;
         }
     }
 
@@ -365,10 +360,7 @@ public class PlaceOrderActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.place_order_truck_btn:
                 Log.d(PlaceOrderActivity.class.getName(), "place order");
-
                 if (checkOrderInfo()){
-
-
                     builder = new AlertDialog.Builder(this);
                     dialogView=(getLayoutInflater().inflate(R.layout.dialog_item_confirm,null));
                     dialogText=(TextView)dialogView.findViewById(R.id.dialog_confirm_text);
@@ -431,12 +423,6 @@ public class PlaceOrderActivity extends AppCompatActivity implements View.OnClic
                                         @Override
                                         public void onErrorResponse(VolleyError volleyError) {
                                             Log.e(PlaceOrderActivity.class.getName(), volleyError.getMessage(), volleyError);
-                                            //http authentication 401
-//                                if (volleyError.networkResponse.statusCode == Net.NET_ERROR_AUTHENTICATION) {
-//                                    Intent intent = new Intent(UserActivity.this, LoginActivity.class);
-//                                    startActivity(intent);
-//                                    return;
-//                                }
                                             Toast.makeText(PlaceOrderActivity.this, PlaceOrderActivity.this.getResources().getString(R.string.network_error),
                                                     Toast.LENGTH_SHORT).show();
                                         }

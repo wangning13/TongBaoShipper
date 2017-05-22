@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import cn.edu.nju.software.tongbaoshipper.common.Account;
+import cn.edu.nju.software.tongbaoshipper.model.Account;
 import cn.edu.nju.software.tongbaoshipper.R;
 
 public class AccountAdapter extends BaseAdapter {

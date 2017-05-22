@@ -22,9 +22,11 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
 import cn.edu.nju.software.tongbaoshipper.constant.Common;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.service.UserService;
@@ -62,6 +64,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 if (TextUtils.isEmpty(etPhone.getText().toString()) || TextUtils.isEmpty(etPassword.getText().toString())) {
                     Toast.makeText(RegisterActivity.this, RegisterActivity.this.getResources().getString(R.string.register_message_not_completed),
                             Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!isMobileNum(etPhone.getText().toString())){
+                    Toast.makeText(RegisterActivity.this, "手机号格式不正确！",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 // 密码长度大于等于8
@@ -145,5 +151,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 Log.e(RegisterActivity.class.getName(), "Unknown id");
         }
 
+    }
+
+    private boolean isMobileNum(String mobileNum) {
+        boolean result = false;
+
+        try {
+            Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
+            Matcher m = p.matcher(mobileNum);
+            result = m.matches();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

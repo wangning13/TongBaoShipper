@@ -2,6 +2,7 @@ package cn.edu.nju.software.tongbaoshipper.controller.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,8 +35,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Common;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.constant.Prefs;
@@ -62,8 +63,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * init view
      */
     private void initView() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Prefs.USER_INFO,Context.MODE_PRIVATE);
         etPhone = (EditText) findViewById(R.id.login_et_phone);
+        etPhone.setText(sharedPreferences.getString(Prefs.PHONE_NUMBER,""));
         etPassword = (EditText) findViewById(R.id.login_et_password);
+        etPassword.setText(sharedPreferences.getString(Prefs.PWD,""));
         TextView tvLoginError = (TextView) findViewById(R.id.login_tv_error);
         LinearLayout btnLogin = (LinearLayout) findViewById(R.id.login_btn);
         btnRegister = (LinearLayout) findViewById(R.id.login_btn_register);

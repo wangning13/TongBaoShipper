@@ -50,8 +50,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.constant.RequestCode;
 import cn.edu.nju.software.tongbaoshipper.service.UserService;
@@ -82,6 +82,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         if (User.isLogin()) {
             tvName.setText(User.getInstance().getNiceName());
             tvPhone.setText(User.getInstance().getPhoneNum());
+            String internetUrl = "http://on5vygg48.bkt.clouddn.com/vae.jpg";
             if (User.getInstance().getIcon() != null) {
                 ivAvatar.setImageBitmap(User.getInstance().getIcon());
             }

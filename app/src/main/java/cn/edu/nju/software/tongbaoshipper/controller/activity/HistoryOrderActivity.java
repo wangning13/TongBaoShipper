@@ -26,9 +26,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.edu.nju.software.tongbaoshipper.common.Order;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.User;
+import cn.edu.nju.software.tongbaoshipper.model.Order;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.R;
 import cn.edu.nju.software.tongbaoshipper.service.ShipperService;
@@ -253,12 +253,6 @@ public class HistoryOrderActivity extends AppCompatActivity implements View.OnCl
                                     @Override
                                     public void onErrorResponse(VolleyError volleyError) {
                                         Log.e(AllTruckActivity.class.getName(), volleyError.getMessage(), volleyError);
-                                        // http authentication 401
-//                        if (volleyError.networkResponse.statusCode == Net.NET_ERROR_AUTHENTICATION) {
-//                            Intent intent = new Intent(AccountActivity.this, LoginActivity.class);
-//                            startActivity(intent);
-//                            return;
-//                        }
                                         Toast.makeText(HistoryOrderActivity.this, HistoryOrderActivity.this.getResources().getString(R.string.network_error),
                                                 Toast.LENGTH_SHORT).show();
                                     }
@@ -306,8 +300,6 @@ public class HistoryOrderActivity extends AppCompatActivity implements View.OnCl
 
                                                 Toast.makeText(HistoryOrderActivity.this, "订单评论已提交",
                                                         Toast.LENGTH_SHORT).show();
-
-
                                             } else {
                                                 Toast.makeText(HistoryOrderActivity.this, ShipperService.getErrorMsg(jsonObject),
                                                         Toast.LENGTH_SHORT).show();
@@ -321,19 +313,11 @@ public class HistoryOrderActivity extends AppCompatActivity implements View.OnCl
                                     @Override
                                     public void onErrorResponse(VolleyError volleyError) {
                                         Log.e(AllTruckActivity.class.getName(), volleyError.getMessage(), volleyError);
-                                        // http authentication 401
-//                        if (volleyError.networkResponse.statusCode == Net.NET_ERROR_AUTHENTICATION) {
-//                            Intent intent = new Intent(AccountActivity.this, LoginActivity.class);
-//                            startActivity(intent);
-//                            return;
-//                        }
                                         Toast.makeText(HistoryOrderActivity.this, HistoryOrderActivity.this.getResources().getString(R.string.network_error),
                                                 Toast.LENGTH_SHORT).show();
                                     }
                                 }, params);
                         requestQueue.add(request);
-
-
                     }
                 });
                 builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -342,7 +326,6 @@ public class HistoryOrderActivity extends AppCompatActivity implements View.OnCl
                         // 执行点击取消按钮的业务逻辑
                     }
                 });
-
                 dialog = builder.create();
                 dialog.show();
 

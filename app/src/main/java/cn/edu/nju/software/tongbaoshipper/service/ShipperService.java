@@ -23,12 +23,12 @@ import java.util.Locale;
 import java.util.Map;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.Address;
-import cn.edu.nju.software.tongbaoshipper.common.Driver;
-import cn.edu.nju.software.tongbaoshipper.common.DriverPosition;
-import cn.edu.nju.software.tongbaoshipper.common.Order;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.Truck;
+import cn.edu.nju.software.tongbaoshipper.model.Address;
+import cn.edu.nju.software.tongbaoshipper.model.Driver;
+import cn.edu.nju.software.tongbaoshipper.model.DriverPosition;
+import cn.edu.nju.software.tongbaoshipper.model.Order;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.Truck;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 
 public class ShipperService {

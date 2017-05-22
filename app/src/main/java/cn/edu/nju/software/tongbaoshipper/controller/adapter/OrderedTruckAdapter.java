@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import cn.edu.nju.software.tongbaoshipper.common.Truck;
+import cn.edu.nju.software.tongbaoshipper.model.Truck;
 import cn.edu.nju.software.tongbaoshipper.R;
 
 public class OrderedTruckAdapter extends BaseAdapter implements AdapterView.OnItemLongClickListener {

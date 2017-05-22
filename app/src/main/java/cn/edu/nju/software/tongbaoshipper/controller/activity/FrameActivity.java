@@ -38,15 +38,14 @@ import java.util.Map;
 import java.util.Set;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.PostRequest;
-import cn.edu.nju.software.tongbaoshipper.common.User;
 import cn.edu.nju.software.tongbaoshipper.constant.Common;
 import cn.edu.nju.software.tongbaoshipper.constant.Net;
 import cn.edu.nju.software.tongbaoshipper.constant.Prefs;
 import cn.edu.nju.software.tongbaoshipper.controller.fragment.FragmentHome;
 import cn.edu.nju.software.tongbaoshipper.controller.fragment.FragmentMy;
-import cn.edu.nju.software.tongbaoshipper.controller.fragment.FragmentNearBy;
 import cn.edu.nju.software.tongbaoshipper.controller.fragment.FragmentOrder;
+import cn.edu.nju.software.tongbaoshipper.model.PostRequest;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 import cn.edu.nju.software.tongbaoshipper.service.ShipperService;
 import cn.edu.nju.software.tongbaoshipper.service.UserService;
 import cn.jpush.android.api.JPushInterface;
@@ -58,8 +57,8 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
      * is start app(load user message)
      */
     private static boolean IS_START_APP = true;
-    private ImageView ivHome, ivNearby, ivOrder, ivMy;
-    private TextView tvHome, tvNearby, tvOrder, tvMy;
+    private ImageView ivHome, ivOrder, ivMy;
+    private TextView tvHome, tvOrder, tvMy;
     private FragmentManager fm;
     private FragmentTransaction ft;
     // fragment my contact PopupWindow
@@ -85,7 +84,6 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
 
         SDKInitializer.initialize(this.getApplicationContext());
         ShipperService.getAllTruckType(FrameActivity.this);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_frame);
         initView();
 
@@ -112,15 +110,15 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
      */
     private void initView() {
         LinearLayout btnHome = (LinearLayout) findViewById(R.id.frame_btn_home);
-        LinearLayout btnNearby = (LinearLayout) findViewById(R.id.frame_btn_nearby);
+//        LinearLayout btnNearby = (LinearLayout) findViewById(R.id.frame_btn_nearby);
         LinearLayout btnOrder = (LinearLayout) findViewById(R.id.frame_btn_order);
         LinearLayout btnMy = (LinearLayout) findViewById(R.id.frame_btn_my);
         ivHome = (ImageView) findViewById(R.id.frame_iv_home);
-        ivNearby = (ImageView) findViewById(R.id.frame_iv_nearby);
+//        ivNearby = (ImageView) findViewById(R.id.frame_iv_nearby);
         ivOrder = (ImageView) findViewById(R.id.frame_iv_order);
         ivMy = (ImageView) findViewById(R.id.frame_iv_my);
         tvHome = (TextView) findViewById(R.id.frame_tv_home);
-        tvNearby = (TextView) findViewById(R.id.frame_tv_nearby);
+//        tvNearby = (TextView) findViewById(R.id.frame_tv_nearby);
         tvOrder = (TextView) findViewById(R.id.frame_tv_order);
         tvMy = (TextView) findViewById(R.id.frame_tv_my);
 
@@ -132,7 +130,7 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
 
         // 添加底部按钮监听
         btnHome.setOnClickListener(this);
-        btnNearby.setOnClickListener(this);
+//        btnNearby.setOnClickListener(this);
         btnOrder.setOnClickListener(this);
         btnMy.setOnClickListener(this);
     }
@@ -143,12 +141,12 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
     private void initBottomBtnStyle() {
         // frame图片资源重新配置
         ivHome.setImageResource(R.drawable.frame_home);
-        ivNearby.setImageResource(R.drawable.frame_nearby);
+//        ivNearby.setImageResource(R.drawable.frame_nearby);
         ivOrder.setImageResource(R.drawable.frame_order);
         ivMy.setImageResource(R.drawable.frame_my);
         // 初始化底部文字颜色
         tvHome.setTextColor(ContextCompat.getColor(this, R.color.font_gray));
-        tvNearby.setTextColor(ContextCompat.getColor(this, R.color.font_gray));
+//        tvNearby.setTextColor(ContextCompat.getColor(this, R.color.font_gray));
         tvOrder.setTextColor(ContextCompat.getColor(this, R.color.font_gray));
         tvMy.setTextColor(ContextCompat.getColor(this, R.color.font_gray));
 
@@ -166,12 +164,12 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
                 tvHome.setTextColor(ContextCompat.getColor(this, R.color.font_blue));
                 ft.replace(R.id.frame_fragment, new FragmentHome(this));
                 break;
-            case R.id.frame_btn_nearby:
-                Log.d(this.getClass().getName(), "nearby");
-                ivNearby.setImageResource(R.drawable.frame_nearby_pressed);
-                tvNearby.setTextColor(ContextCompat.getColor(this, R.color.font_blue));
-                ft.replace(R.id.frame_fragment, new FragmentNearBy(this));
-                break;
+//            case R.id.frame_btn_nearby:
+//                Log.d(this.getClass().getName(), "nearby");
+//                ivNearby.setImageResource(R.drawable.frame_nearby_pressed);
+//                tvNearby.setTextColor(ContextCompat.getColor(this, R.color.font_blue));
+//                ft.replace(R.id.frame_fragment, new FragmentNearBy(this));
+//                break;
             case R.id.frame_btn_order:
                 Log.d(this.getClass().getName(), "order");
                 ivOrder.setImageResource(R.drawable.frame_order_pressed);

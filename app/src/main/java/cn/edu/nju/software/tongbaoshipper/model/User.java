@@ -1,4 +1,4 @@
-package cn.edu.nju.software.tongbaoshipper.common;
+package cn.edu.nju.software.tongbaoshipper.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;

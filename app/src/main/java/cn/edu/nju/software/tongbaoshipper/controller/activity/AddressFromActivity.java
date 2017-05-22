@@ -37,7 +37,8 @@ public class AddressFromActivity extends AppCompatActivity implements
 
     private PoiSearch mPoiSearch = null;
     private List<PoiInfo> addressList;
-    private double longitude,latitude;
+    private double longitude = 1024;
+    private double latitude = 1024;
     final int RESULT_CODE_START=102;
 
     private LinearLayout ok_btn,back_btn;
@@ -222,7 +223,9 @@ public class AddressFromActivity extends AppCompatActivity implements
             case R.id.address_from_btn_ok:
                 Log.d(AddressFromActivity.class.getName(), "ok");
                 System.out.println(phoneinput.length());
-                if (keyWorldsView.length()*nameinput.length()*phoneinput.length()!=0) {
+                if (longitude == 1024){
+                    Toast.makeText(AddressFromActivity.this,"请输入并选择详细地址",Toast.LENGTH_SHORT).show();
+                } else if (keyWorldsView.length()*nameinput.length()*phoneinput.length()!=0) {
                     Intent intent = new Intent();
                     intent.putExtra("from", keyWorldsView.getText().toString());
                     intent.putExtra("name", nameinput.getText().toString());

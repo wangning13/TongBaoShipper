@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,7 +22,6 @@ import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.User;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.AboutActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.FeedbackActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.FrameActivity;
@@ -32,6 +30,7 @@ import cn.edu.nju.software.tongbaoshipper.controller.activity.MessageActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.SettingActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.UserActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.WalletActivity;
+import cn.edu.nju.software.tongbaoshipper.model.User;
 
 public class FragmentMy extends Fragment implements View.OnClickListener {
 
@@ -75,8 +74,8 @@ public class FragmentMy extends Fragment implements View.OnClickListener {
                             @Override
                             public void onErrorResponse(VolleyError volleyError) {
                                 Log.e(FragmentMy.class.getName(), volleyError.getMessage(), volleyError);
-                                Toast.makeText(context, context.getResources().getString(R.string.network_error),
-                                        Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(context, context.getResources().getString(R.string.network_error),
+//                                        Toast.LENGTH_SHORT).show();
                             }
                         }
                 );

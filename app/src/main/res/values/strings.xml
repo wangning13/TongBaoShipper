@@ -67,7 +67,7 @@
     <string name="home_driver">常用司机</string>
     <string name="home_wallet">钱包</string>
     <string name="home_order">订单查询</string>
-    <string name="home_help">帮助中心</string>
+    <string name="home_help">附近</string>
     <string name="home_order_truck">立即叫车</string>
 
     <!--activity login-->

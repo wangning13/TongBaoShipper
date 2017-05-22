@@ -1,4 +1,4 @@
-package cn.edu.nju.software.tongbaoshipper.common;
+package cn.edu.nju.software.tongbaoshipper.model;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;

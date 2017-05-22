@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_white"
-    tools:context=".View.Activity.PlaceOrderActivity">
+    tools:context=".controller.activity.PlaceOrderActivity">
 
     <RelativeLayout
         android:id="@+id/place_order_title"
@@ -95,8 +95,7 @@
                         android:layout_toRightOf="@+id/order_iv_date"
                         android:background="@null"
                         android:hint="请选择需要发货的日期"
-                        android:clickable="true"
-                        android:editable="false" />
+                        android:focusableInTouchMode="false" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -151,9 +150,8 @@
                         android:layout_toRightOf="@+id/start_point"
                         android:background="@null"
                         android:hint="请填写发货人地址和号码信息"
-                        android:clickable="true"
                         android:minLines="2"
-                        android:editable="false" />
+                        android:focusableInTouchMode="false" />
                 </RelativeLayout>
                 <View
                     android:layout_width="match_parent"
@@ -182,9 +180,8 @@
                         android:layout_toRightOf="@+id/end_point"
                         android:background="@null"
                         android:hint="请填写收货人地址和号码信息"
-                        android:clickable="true"
                         android:minLines="2"
-                        android:editable="false" />
+                        android:focusableInTouchMode="false" />
                 </RelativeLayout>
 
             </LinearLayout>

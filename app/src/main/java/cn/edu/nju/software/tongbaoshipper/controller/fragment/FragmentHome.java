@@ -20,17 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.edu.nju.software.tongbaoshipper.R;
-import cn.edu.nju.software.tongbaoshipper.common.Banner;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.AddressActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.DriverActivity;
-import cn.edu.nju.software.tongbaoshipper.controller.activity.FrameActivity;
-import cn.edu.nju.software.tongbaoshipper.controller.activity.HelpActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.MessageActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.activity.PlaceOrderActivity;
-import cn.edu.nju.software.tongbaoshipper.controller.activity.WalletActivity;
 import cn.edu.nju.software.tongbaoshipper.controller.adapter.BannerPagerAdapter;
-
-import static cn.edu.nju.software.tongbaoshipper.R.id.home_btn_help;
+import cn.edu.nju.software.tongbaoshipper.model.Banner;
 
 public class FragmentHome extends Fragment implements View.OnClickListener {
 
@@ -94,140 +89,22 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
         TextView btnMessage = (TextView) view.findViewById(R.id.home_btn_message);
         TextView btnAddress = (TextView) view.findViewById(R.id.home_btn_address);
         TextView btnDriver = (TextView) view.findViewById(R.id.home_btn_driver);
-        TextView btnWallet = (TextView) view.findViewById(R.id.home_btn_wallet);
-        TextView btnOrder = (TextView) view.findViewById(R.id.home_btn_order);
-        TextView btnHelp = (TextView) view.findViewById(R.id.home_btn_help);
+//        TextView btnWallet = (TextView) view.findViewById(R.id.home_btn_wallet);
+//        TextView btnOrder = (TextView) view.findViewById(R.id.home_btn_order);
+//        TextView btnHelp = (TextView) view.findViewById(R.id.home_btn_help);
         RelativeLayout btnOrderTruck = (RelativeLayout) view.findViewById(R.id.home_btn_order_truck);
 
         // 添加事件监听器
         btnMessage.setOnClickListener(this);
         btnAddress.setOnClickListener(this);
         btnDriver.setOnClickListener(this);
-        btnWallet.setOnClickListener(this);
-        btnOrder.setOnClickListener(this);
-        btnHelp.setOnClickListener(this);
+//        btnWallet.setOnClickListener(this);
+//        btnOrder.setOnClickListener(this);
+//        btnHelp.setOnClickListener(this);
         btnOrderTruck.setOnClickListener(this);
     }
 
-    /**
-     * init banner resource
-     */
-//    private void initBannerResource() {
-//        ivList = new ArrayList<>();
-//        arrBanner = new ArrayList<>();
-//        // get banner data
-//        JsonObjectRequest request = new JsonObjectRequest(
-//                Request.Method.POST,
-//                Net.URL_USER_GET_BANNER_INFO,
-//                new Response.Listener<JSONObject>() {
-//                    @Override
-//                    public void onResponse(JSONObject jsonObject) {
-//                        Log.d(FragmentHome.class.getName(), jsonObject.toString());
-//                        try {
-//                            if (UserService.getResult(jsonObject)) {
-//                                ArrayList<Banner> arr = UserService.getBannerInfo(jsonObject);
-//                                // init banner
-//                                for (int i = 0; i < arr.size(); i++) {
-//                                    arrBanner.add(arr.get(i));
-//                                    bannerPagerAdapter.notifyDataSetChanged();
-//                                }
-//
-//                                // init banner dot
-//                                for (int j = 0; j < arrBanner.size(); j++) {
-//                                    View vDot = new View(context);
-//                                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(8, 8);
-//                                    params.leftMargin = 4;
-//                                    vDot.setLayoutParams(params);
-//                                    if (j == 0) {
-//                                        vDot.setEnabled(true);
-//                                    } else {
-//                                        vDot.setEnabled(false);
-//                                    }
-//                                    vDot.setBackgroundResource(R.drawable.dot_background);
-//                                }
-//                                // init banner image
-//                                for (int i = 0; i < arrBanner.size(); i++) {
-//                                    ImageRequest imageRequest = new ImageRequest(arrBanner.get(i).getImgUrl(),
-//                                            new Response.Listener<Bitmap>() {
-//                                                @Override
-//                                                public void onResponse(Bitmap bitmap) {
-//                                                    Log.d(FragmentHome.class.getName(), "get banner icon");
-//                                                    ImageView iv = new ImageView(context);
-//                                                    iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//                                                    iv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                                                            LinearLayout.LayoutParams.MATCH_PARENT));
-//                                                    iv.setImageBitmap(bitmap);
-//                                                    ivList.add(iv);
-//                                                    bannerPagerAdapter.notifyDataSetChanged();
-//                                                }
-//                                            }, 0, 0, ImageView.ScaleType.CENTER, Bitmap.Config.ARGB_8888,
-//                                            new Response.ErrorListener() {
-//                                                @Override
-//                                                public void onErrorResponse(VolleyError volleyError) {
-//                                                    Log.e(FragmentHome.class.getName(), volleyError.getMessage(), volleyError);
-//                                                    Toast.makeText(context, context.getResources().getString(R.string.network_error),
-//                                                            Toast.LENGTH_SHORT).show();
-//                                                }
-//                                            }
-//                                    );
-//                                    requestQueue.add(imageRequest);
-//                                    requestQueue.start();
-//                                    bannerPagerAdapter.notifyDataSetChanged();
-//                                }
-//                            } else {
-//                                Toast.makeText(context, UserService.getErrorMsg(jsonObject),
-//                                        Toast.LENGTH_SHORT).show();
-//                            }
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError volleyError) {
-//                        Log.e(context.getClass().getName(), volleyError.getMessage(), volleyError);
-//                    }
-//                }
-//        );
-//        requestQueue.add(request);
-//        requestQueue.start();
-//    }
 
-    /**
-     * init banner action
-     */
-//    private void initBannerAction() {
-//        vpBanner.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//
-//            private int index = 0;
-//
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                layoutDot.getChildAt(index).setEnabled(false);
-//                layoutDot.getChildAt(position).setEnabled(true);
-//                index = position;
-//                currentItem = position;
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        });
-//    }
-
-//    private void startAdvertise() {
-//        ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-//        // 4 seconds scroll banner
-//        scheduledExecutorService.scheduleAtFixedRate(new ScrollTask(), 1, 4,
-//                TimeUnit.SECONDS);
-//    }
 
     @Override
     public void onClick(View v) {
@@ -248,20 +125,20 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
                 Intent intentDriver = new Intent(context, DriverActivity.class);
                 startActivity(intentDriver);
                 break;
-            case R.id.home_btn_wallet:
-                Log.d(this.getClass().getName(), "wallet");
-                Intent intentUser = new Intent(context, WalletActivity.class);
-                startActivity(intentUser);
-                break;
-            case R.id.home_btn_order:
-                Log.d(this.getClass().getName(), "order");
-                ((FrameActivity) getActivity()).getOrder();
-                break;
-            case home_btn_help:
-                Log.d(this.getClass().getName(), "help");
-                Intent intentHelp = new Intent(context,HelpActivity.class);
-                startActivity(intentHelp);
-                break;
+//            case R.id.home_btn_wallet:
+//                Log.d(this.getClass().getName(), "wallet");
+//                Intent intentUser = new Intent(context, WalletActivity.class);
+//                startActivity(intentUser);
+//                break;
+//            case R.id.home_btn_order:
+//                Log.d(this.getClass().getName(), "order");
+//                ((FrameActivity) getActivity()).getOrder();
+//                break;
+//            case home_btn_help:
+//                Log.d(this.getClass().getName(), "help");
+//                Intent intentHelp = new Intent(context,HelpActivity.class);
+//                startActivity(intentHelp);
+//                break;
             case R.id.home_btn_order_truck:
                 Log.d(this.getClass().getName(), "order truck");
                 Intent intentPlaceOrder = new Intent(context, PlaceOrderActivity.class);
